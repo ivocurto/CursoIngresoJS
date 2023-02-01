@@ -4,6 +4,11 @@ y lo muestro por 'ID' al presionar el botón 'mostrar'
 */
 function mostrar()
 {
-	alert("ok");
+	//1 declaro mis variables
+	let datoIngresado;
+	//2 pido el dato (entrada)
+	datoIngresado = prompt("Ingresar dato");
+	//3 busco como acceder al dato y a su contenido y le asigno el datoIngresado (sailda)
+	document.getElementById("txtIdNombre").value = datoIngresado;
 }
 
