@@ -1,4 +1,4 @@
-/*
+/* Ivo Curto Eivers
 Debemos lograr tomar Los numeros por ID ,
 transformarlos a enteros (parseInt) y Sumarlos.
 mostrar el resulto por medio de "ALERT"*/
@@ -15,7 +15,7 @@ function sumar()
 
 	//3 sumo los datos
 	resultado = numeroUno + numeroDos;
-	
+
 	//4 muestro los datos (salida)
 	alert(resultado);
 }
