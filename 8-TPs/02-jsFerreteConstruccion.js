@@ -58,8 +58,8 @@ function Materiales() {
     let mensaje;
 
     //2 se guardan los metros ingresados en las variables y se convierten de cadena de texto a número
-    largoIngresado = parseInt(document.getElementById("txtIdLargo").value);
-    anchoIngresado = parseInt(document.getElementById("txtIdAncho").value);
+    largoIngresado = parseFloat(document.getElementById("txtIdLargo").value);
+    anchoIngresado = parseFloat(document.getElementById("txtIdAncho").value);
 
     //3 se realiza la cuenta para saber cuál es el área del rectángulo
     resultado = largoIngresado * anchoIngresado;

@@ -8,13 +8,18 @@ function mostrarAumento()
 	//1 definición de variables
 	let sueldoIngresado;
 	let resultado;
+	let porcentaje;
 
-	//2 recupero el dato ingresado desde el id.value y lo convierto de cadena de texto a número (entrada)
+	//2 asigno el porcentaje que quiero utilizar
+	porcentaje = -10
+
+	//3 recupero el dato ingresado desde el id.value y lo parseo (entrada)
 	sueldoIngresado = parseInt(document.getElementById("txtIdSueldo").value);
 
-	//3 le asigno a la variable resultado una cuenta para aumentar el 10% al sueldoIngresado 
-	resultado = sueldoIngresado * 1.1;
+	//4 le asigno a la variable resultado una cuenta para aumentar el 10% al sueldoIngresado 
+	resultado = sueldoIngresado * porcentaje / 100;
+	resultado = sueldoIngresado + resultado;
 
-	//4 muestro el el contenido de la variable resultado en el valor del cuadro de texto "txtIdResultado" (salida)
+	//5 muestro el contenido de la variable resultado en el valor del cuadro de texto "txtIdResultado" (salida)
 	document.getElementById("txtIdResultado").value = resultado;
 }

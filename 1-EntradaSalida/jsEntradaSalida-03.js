@@ -22,19 +22,24 @@ function mostrar() {
 	let precio;
 	let precioAumentado;
 	let mensaje;
+	let aumento;
 
-	//2 se pide la descripción por un prompt y se guarda en una variable
+	//2 se define el porcentaje de aumento
+	aumento = 30;
+
+	//3 se pide la descripción por un prompt y se guarda en una variable
 	descripcion = prompt("Escriba la descripción del producto");
 
-	//3 se guarda el precio ingresado en la variable precio y se lo convierte de texto a número entero
+	//4 se guarda el precio ingresado en la variable precio y se lo convierte de texto a número entero
 	precio = parseInt(document.getElementById("txtIdNombre").value);
 
-	//4 se aumenta el precio en un 30% y se lo guarda en la variable precioAumentado
-	precioAumentado = precio * 1.3;
+	//5 se aumenta el precio en un segun el % de aumento y se lo guarda en la variable precioAumentado
+	precioAumentado = precio * aumento / 100;
+	precioAumentado = precio + precioAumentado;
 
-	//5 Se concatena el mensaje para el usuario
+	//6 Se concatena el mensaje para el usuario
 	mensaje = "Descripción del producto: \n" + descripcion + "\nPrecio del producto: \n$" + precioAumentado;
 
-	//6 Se muestra el mensaje a través de un alert
+	//7 Se muestra el mensaje a través de un alert
 	alert(mensaje);
 }

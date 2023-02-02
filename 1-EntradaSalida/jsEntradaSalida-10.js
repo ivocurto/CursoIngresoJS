@@ -9,14 +9,19 @@ en el cuadro de texto "RESULTADO"*/
 	//1 definición de variables
 	let importeIngresado;
 	let resultado;
+	let porcentaje;
 
-	//2 se recupera el id.value, se convierte de cadena de texto a número y lo guardamos en la variable importeIngresado
+	//2 asigno el porcentaje que quiero utilizar
+	porcentaje = -25
+
+	//3 se recupera el id.value, se convierte de cadena de texto a número y lo guardamos en la variable importeIngresado
 	importeIngresado = parseInt(document.getElementById("txtIdImporte").value);
 
-	//3 se hace el descuento y se guarda en la variable resultado
-	resultado = importeIngresado * 0.75;
+	//4 se hace el descuento y se guarda en la variable resultado
+	resultado = importeIngresado * porcentaje / 100;
+	resultado = importeIngresado + resultado;
 
-	//4 se muestra el número guardado en la variable resultado en el valor del cuadro de texto "txtIdResultado"
+	//5 se muestra el número guardado en la variable resultado en el valor del cuadro de texto "txtIdResultado"
 	document.getElementById("txtIdResultado").value = resultado;
 } */
 
@@ -29,7 +34,7 @@ function mostrarAumento() {
 	let resultado;
 
 
-	//2 se guarda el dato ingresado por el usuario en la variable importeIngresado y se lo convierte de texto a número entero
+	//2 se guarda el dato ingresado por el usuario en la variable importeIngresado y se parsea
 	importeIngresado = parseInt(document.getElementById("txtIdImporte").value);
 	
 	//3 se le pide el descuento al usuario mediante un prompt y se guarda en la variable descuento y se lo convierte de texto a número entero
