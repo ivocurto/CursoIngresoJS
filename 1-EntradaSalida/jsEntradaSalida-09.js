@@ -11,7 +11,7 @@ function mostrarAumento()
 	let porcentaje;
 
 	//2 asigno el porcentaje que quiero utilizar
-	porcentaje = -10
+	porcentaje = 10
 
 	//3 recupero el dato ingresado desde el id.value y lo parseo (entrada)
 	sueldoIngresado = parseInt(document.getElementById("txtIdSueldo").value);

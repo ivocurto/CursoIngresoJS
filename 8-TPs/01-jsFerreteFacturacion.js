@@ -13,9 +13,9 @@ function Sumar ()
     let mensaje;
 
     //2 se guardan los precios ingresados en las variables y se convierten de cadena de texto a número
-    precioUno = parseInt(document.getElementById("txtIdPrecioUno").value);
-    precioDos = parseInt(document.getElementById("txtIdPrecioDos").value);
-    precioTres = parseInt(document.getElementById("txtIdPrecioTres").value);
+    precioUno = parseFloat(document.getElementById("txtIdPrecioUno").value);
+    precioDos = parseFloat(document.getElementById("txtIdPrecioDos").value);
+    precioTres = parseFloat(document.getElementById("txtIdPrecioTres").value);
 	
     //3 se suman los precios y se guardan en la variable resultado.
     resultado = precioUno + precioDos + precioTres;

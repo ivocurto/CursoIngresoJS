@@ -11,4 +11,3 @@ function mostrar()
 	//3 busco como acceder al dato y a su contenido y le asigno el datoIngresado (sailda)
 	document.getElementById("txtIdNombre").value = datoIngresado;
 }
-

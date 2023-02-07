@@ -33,7 +33,6 @@ function mostrarAumento() {
 	let descuento;
 	let resultado;
 
-
 	//2 se guarda el dato ingresado por el usuario en la variable importeIngresado y se parsea
 	importeIngresado = parseInt(document.getElementById("txtIdImporte").value);
 	
