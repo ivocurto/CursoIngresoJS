@@ -14,6 +14,9 @@ function mostrar()
 	else if (edad >= 13 && edad <= 17){
 		mensaje = "Es adolescente";
 	}
+	else {
+		mensaje = "Es un niño";
+	}
 	alert(mensaje);
 
 }//FIN DE LA FUNCIÓN
