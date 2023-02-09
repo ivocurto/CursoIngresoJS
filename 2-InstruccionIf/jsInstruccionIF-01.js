@@ -33,7 +33,7 @@ mas = eso no se hace/ */
 	let velocidad;
 	let mensaje;
 
-	//se asigna el valor ingresado por prompt a la variable distancia
+	//se asigna el valor ingresado por prompt a las variables
 	distancia = parseFloat(prompt("Ingrese la distancia que viajó en kilómetros"));
 	tiempo = parseFloat(prompt("Ingrese el tiempo que tardó en horas"));
 
@@ -64,3 +64,51 @@ mas = eso no se hace/ */
 } */
 
 //////////////////////////1 bis bis//////////////////////////
+/* Ejercicio 1 bis bis:
+con if
+ingresar el nombre y los datos requeridos para calcular el IMC , 
+e informar a la persona si es:
+Bajo peso <18.5
+Peso normal 18,5-24.9
+Preobesidad 25-26.9
+Obesidad I 27-29.9
+Obesidad II 30-34.9
+Obesidad III >40 */
+
+function mostrar()
+{
+	//se definen variables necesarias
+	let peso;
+	let altura;
+	let IMC;
+	let mensaje;
+
+	//se asigna el valor ingresado por prompt a las variables
+	peso = parseFloat(prompt("Ingrese su peso en kilogramos"));
+	altura = parseFloat(prompt("Ingrese su altura en metros"));
+
+	//se hace la cuenta para saber cual es el IMC de la persona
+	IMC = peso / (altura * altura);
+
+	//se crea el condicional if
+	if (IMC < 18.5) {
+		mensaje = "Bajo peso";
+		document.getElementById("txtIdEdad").value = mensaje;
+	}
+	else if (velocidad <= 80){
+		mensaje = "Lento";
+		document.getElementById("txtIdEdad").value = mensaje;
+	}
+	else if (velocidad <= 100){
+		mensaje = "Buen ritmo";
+		document.getElementById("txtIdEdad").value = mensaje;
+	}
+	else if (velocidad <= 120){
+		mensaje = "Ahí de la ley";
+		document.getElementById("txtIdEdad").value = mensaje;
+	}
+	else if (velocidad > 120){
+		mensaje = "Eso no se hace";
+		document.getElementById("txtIdEdad").value = mensaje;
+	}
+}
