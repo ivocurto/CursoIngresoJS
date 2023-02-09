@@ -13,7 +13,7 @@
 
 }//FIN DE LA FUNCIÓN */
 
-//////////////////////////1bis//////////////////////////
+//////////////////////////1 bis//////////////////////////
 /* Ejercicio 1bis: 
 /con if
 pedir a una persona que fue de vaciones , 
@@ -24,7 +24,8 @@ hata 80km/h= lento
 hasta 100= buen ritmo
 hasta 120= ahi de la ley 
 mas = eso no se hace/ */
-function mostrar()
+
+/* function mostrar()
 {
 	//se definen variables necesarias
 	let distancia;
@@ -60,5 +61,6 @@ function mostrar()
 		mensaje = "Eso no se hace";
 		document.getElementById("txtIdEdad").value = mensaje;
 	}
+} */
 
-}
+//////////////////////////1 bis bis//////////////////////////
