@@ -7,7 +7,8 @@ function mostrar()
 	//2 Asignación de valores a las variables
 	hora = document.getElementById("txtIdHora").value;
 
-	//3 evaluación con switch
+	//3 evaluación con if y switch
+	if (hora >= 0 && hora <= 24){
 		switch(hora){
 			case "7":
 			case "8":
@@ -19,6 +20,10 @@ function mostrar()
 			default: 
 				mensaje = "No es de mañana";
 	}
+	} else {
+		mensaje = "La hora no existe";
+		}
 
-	alert(mensaje)
+	//4 respuesta
+	alert(mensaje);
 }

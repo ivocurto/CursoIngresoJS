@@ -8,7 +8,7 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
-function CalcularPrecio () 
+/* function CalcularPrecio () 
 {
  	//1 se definen las variables
     let cantLamparas;
@@ -89,4 +89,234 @@ function CalcularPrecio ()
         mensaje = "Usted pagó $" + impuesto + " de IIBB.";
         alert(mensaje);
     }
+} */
+
+//Alumno: Ivo Curto Eivers
+////////////////////solo SWITCH (las marcas), IF(cantidad)////////////////////
+/* function CalcularPrecio () 
+{
+    //1 Definición de variables
+    let cantidadLamparas;
+    let marca;
+    let precio;
+    let porcentajeIIBB;
+    let porcentaje;
+    let impuesto;
+    let precioTotal;
+    let precioFinal;
+    
+    //2 Asignación de valores a variables
+    cantidadLamparas = parseInt(document.getElementById("txtIdCantidad").value);
+    marca = document.getElementById("Marca").value;
+    precio = 35;
+    porcentajeIIBB = 10;
+
+    //3 Evaluación con switch (las marcas), if (cantidad)
+    if (cantidadLamparas >= 6) {
+        porcentaje = -50;
+    } else {
+        switch (marca) {
+            case "ArgentinaLuz":
+                if (cantidadLamparas == 5) {
+                    porcentaje = -40;
+                } else if (cantidadLamparas == 4) {
+                    porcentaje = -25;
+                } else if (cantidadLamparas == 3) {
+                    porcentaje = -15;
+                } else {
+                    porcentaje = 0;
+                }
+                break;
+            case "FelipeLamparas":
+                if (cantidadLamparas == 5) {
+                    porcentaje = -30;
+                } else if (cantidadLamparas == 4) {
+                    porcentaje = -25;
+                } else if (cantidadLamparas == 3) {
+                    porcentaje = -10;
+                } else {
+                    porcentaje = 0;
+                }
+                break;
+            case "JeLuz":
+            case "HazIluminacion":
+            case "Osram":
+                if (cantidadLamparas == 5) {
+                    porcentaje = -30;
+                } else if (cantidadLamparas == 4) {
+                    porcentaje = -20;
+                } else if (cantidadLamparas == 3) {
+                    porcentaje = -5;
+                } else {
+                    porcentaje = 0;
+                }
+        }
+    }
+
+    //4 Calculo descuento
+    precioTotal = precio * cantidadLamparas;
+    precioFinal = precioTotal + (precioTotal * porcentaje / 100);
+
+    //5 Calculo impuesto
+    impuesto = precioFinal + (precioFinal * porcentajeIIBB / 100);
+    impuesto = impuesto - precioFinal;
+
+
+    //6 Evaluación con if para ver si el precio supera los $120
+    if (precioFinal > 120) {
+        alert("IIBB Usted pagó $" + impuesto);
+    }
+
+    //7 Muestra el precioFinal en la caja de texto
+    document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal.toFixed(2);
+} */
+
+//Alumno: Ivo Curto Eivers
+////////////////////con SWITCH (cantidad), IF(marcas)////////////////////
+/* function CalcularPrecio () 
+{
+    //1 Definición de variables
+    let cantidadLamparas;
+    let marca;
+    let precio;
+    let porcentajeIIBB;
+    let porcentaje;
+    let impuesto;
+    let precioTotal;
+    let precioFinal;
+    
+    //2 Asignación de valores a variables
+    cantidadLamparas = parseInt(document.getElementById("txtIdCantidad").value);
+    marca = document.getElementById("Marca").value;
+    precio = 35;
+    porcentajeIIBB = 10;
+
+    //3 Evaluación con switch (las marcas), if (cantidad)
+    switch (cantidadLamparas) {
+        case 1:
+        case 2:
+            porcentaje = 0;
+            break;
+        case 3:
+            if (marca == "ArgentinaLuz") {
+                porcentaje = -15;
+            } else if (marca == "FelipeLamparas") {
+                porcentaje = -10;
+            } else {
+                porcentaje = -5;
+            }
+            break;
+        case 4:
+            if (marca == "ArgentinaLuz" || "FelipeLamparas") {
+                porcentaje = -25;
+            } else {
+                porcentaje = -20;
+            }
+            break;
+        case 5:
+        if (marca == "ArgentinaLuz") {
+            porcentaje = -40;
+        } else {
+            porcentaje = -30;
+        }
+        break;
+        default:
+            porcentaje = -50;
+    }
+
+    //4 Calculo descuento
+    precioTotal = precio * cantidadLamparas;
+    precioFinal = precioTotal + (precioTotal * porcentaje / 100);
+
+    //5 Calculo impuesto
+    impuesto = precioFinal + (precioFinal * porcentajeIIBB / 100);
+    impuesto = impuesto - precioFinal;
+
+
+    //6 Evaluación con if para ver si el precio supera los $120
+    if (precioFinal > 120) {
+        alert("IIBB Usted pagó $" + impuesto);
+    }
+
+    //7 Muestra el precioFinal en la caja de texto
+    document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal.toFixed(2);
+} */
+
+//Alumno: Ivo Curto Eivers
+////////////////////con SWITCH (cantidad), IF(marcas)////////////////////
+function CalcularPrecio () 
+{
+    //1 Definición de variables
+    let cantidadLamparas;
+    let marca;
+    let precio;
+    let porcentajeIIBB;
+    let porcentaje;
+    let impuesto;
+    let precioTotal;
+    let precioFinal;
+    
+    //2 Asignación de valores a variables
+    cantidadLamparas = parseInt(document.getElementById("txtIdCantidad").value);
+    marca = document.getElementById("Marca").value;
+    precio = 35;
+    porcentajeIIBB = 10;
+
+    //3 Evaluación con switch (las marcas), if (cantidad)
+    switch (cantidadLamparas) {
+        case 1:
+        case 2:
+            porcentaje = 0;
+            break;
+        case 3:
+            switch (marca) {
+                case "ArgentinaLuz":
+                    porcentaje = -15;
+                    break;
+                case "FelipeLuz":
+                    porcentaje = -10;
+                    break;
+                default:
+                    porcentaje = -5;
+            }
+            break;
+        case 4:
+            switch (marca) {
+                case "ArgentinaLuz":
+                case "FelipeLuz":
+                    porcentaje = -25;
+                    break;
+                default:
+                    porcentaje = -20;
+            }
+            break;
+        case 5:
+            switch (marca) {
+                case "ArgentinaLuz":
+                    porcentaje = -40;
+                    break;
+                default:
+                    porcentaje = -30;
+            }
+            break;
+        default:
+            porcentaje = -50;
+    }
+
+    //4 Calculo descuento
+    precioTotal = precio * cantidadLamparas;
+    precioFinal = precioTotal + (precioTotal * porcentaje / 100);
+
+    //5 Calculo impuesto
+    impuesto = precioFinal + (precioFinal * porcentajeIIBB / 100);
+    impuesto = impuesto - precioFinal;
+
+
+    //6 Evaluación con if para ver si el precio supera los $120
+    if (precioFinal > 120) {
+        alert("IIBB Usted pagó $" + impuesto);
+    }
+
+    //7 Muestra el precioFinal en la caja de texto
+    document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal.toFixed(2);
 }
