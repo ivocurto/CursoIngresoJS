@@ -27,10 +27,38 @@ mas = eso no se hace/ */
 function mostrar()
 {
 	//se definen variables necesarias
+	let distancia;
+	let tiempo;
+	let velocidad;
+	let mensaje;
 
+	//se asigna el valor ingresado por prompt a la variable distancia
+	distancia = parseFloat(prompt("Ingrese la distancia que viajó en kilómetros"));
+	tiempo = parseFloat(prompt("Ingrese el tiempo que tardó en horas"));
 
-	//se asigna el valor ingresado por id.value a la variable edad
-
+	//se hace la cuenta para saber cual es la velocidad a la que fue
+	velocidad = distancia / tiempo;
 
 	//se crea el condicional if
+	if (velocidad <= 60) {
+		mensaje = "Muy lento";
+		document.getElementById("txtIdEdad").value = mensaje;
+	}
+	else if (velocidad <= 80){
+		mensaje = "Lento";
+		document.getElementById("txtIdEdad").value = mensaje;
+	}
+	else if (velocidad <= 100){
+		mensaje = "Buen ritmo";
+		document.getElementById("txtIdEdad").value = mensaje;
+	}
+	else if (velocidad <= 120){
+		mensaje = "Ahí de la ley";
+		document.getElementById("txtIdEdad").value = mensaje;
+	}
+	else if (velocidad > 120){
+		mensaje = "Eso no se hace";
+		document.getElementById("txtIdEdad").value = mensaje;
+	}
+
 }
