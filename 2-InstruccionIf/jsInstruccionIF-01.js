@@ -95,20 +95,23 @@ function mostrar()
 		mensaje = "Bajo peso";
 		document.getElementById("txtIdEdad").value = mensaje;
 	}
-	else if (velocidad <= 80){
-		mensaje = "Lento";
+	else if (IMC >= 18.5 && IMC <= 24.9){
+		mensaje = "Peso normal";
 		document.getElementById("txtIdEdad").value = mensaje;
 	}
-	else if (velocidad <= 100){
-		mensaje = "Buen ritmo";
+	else if (IMC >= 25 && IMC <= 26.9){
+		mensaje = "Preobesidad";
 		document.getElementById("txtIdEdad").value = mensaje;
 	}
-	else if (velocidad <= 120){
-		mensaje = "Ahí de la ley";
+	else if (IMC >= 27 && IMC <= 29.9){
+		mensaje = "Obesidad I";
 		document.getElementById("txtIdEdad").value = mensaje;
 	}
-	else if (velocidad > 120){
-		mensaje = "Eso no se hace";
+	else if (IMC >= 30 && IMC <= 34.9){
+		mensaje = "Obesidad II";
+		document.getElementById("txtIdEdad").value = mensaje;
+	} else {
+		mensaje = "Obesidad III";
 		document.getElementById("txtIdEdad").value = mensaje;
 	}
 }
