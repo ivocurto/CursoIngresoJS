@@ -59,34 +59,34 @@ function CalcularPrecio ()
         }
     }
 
-    //4 multiplico la cantidad de lamparas por el precio original por unidad y lo guardo en la variable precioOriginalTotal
+    //4 se multiplica la cantidad de lamparas por el precio original por unidad y lo guardo en la variable precioOriginalTotal
     precioTotal = cantLamparas * precioUnidad;
     
-    //5 consigo la cantidad que se le tiene que descontar al precio y lo guardo en la variable descuento
+    //5 se consigue la cantidad que se le tiene que descontar al precio y lo guardo en la variable descuento
     descuento = precioTotal * porcentaje / 100;
     
-    //6 le descuento esa cantidad al precio total orginal
+    //6 se descuenta esa cantidad al precio total orginal
     precioConDto = precioTotal - descuento;
     
-    //7 le asigno al valor de la caja del precio con descuento el resultado (salida)
+    //7 se asigna al valor de la caja del precio con descuento el resultado (salida)
     document.getElementById("txtIdprecioDescuento").value = "$" + precioConDto.toFixed(2);
     
-    //8 Calculo el precioConDto
+    //8 Calcular precio con descuento
     precioTotal = cantLamparas * precioUnidad;
     descuento = precioTotal * porcentaje / 100;
     precioConDto = precioTotal - descuento;
+
+    //9 Calcular precio con impuesto
+    precioConImpto = precioConDto * (1 + 0.01 * porcentajeIIBB);
+    impuesto = precioConImpto - precioConDto;
+    impuesto = impuesto.toFixed(2);
     
-    //9 Asigno el mensaje que va a salir en la caja de precio con descuento
+    //10 Asignar el mensaje que va a salir en la caja de precio con descuento
     document.getElementById("txtIdprecioDescuento").value = "$" + precioConDto.toFixed(2);   
 
-    //10 creo la condicional if para revisar si el precio es mayor a 120 y en el caso de que lo sea, le agrego el impuesto y lo muestro por alert
+    //11 se crea la condicional if para revisar si el precio es mayor a 120 y en el caso de que lo sea, le agrego el impuesto y lo muestro por alert
     if (precioConDto > 120) {
-        precioConImpto = precioConDto * (1 + 0.01 * porcentajeIIBB);
-        impuesto = precioConImpto - precioConDto;
-        impuesto = impuesto.toFixed(2);
-        
         mensaje = "Usted pagó $" + impuesto + " de IIBB.";
         alert(mensaje);
     }
-
 }
