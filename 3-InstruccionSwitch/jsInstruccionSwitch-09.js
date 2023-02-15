@@ -9,10 +9,11 @@ function mostrar()
 	let mensaje;
 
 	//2 asignación de valores a las variables
-	estacionIngresada = document.getElementById("txtIdEstacion").value;
-	destino = document.getElementById("txtIdDestino").value;
 	precio = 15000;
 	porcentaje = 0;
+	
+	estacionIngresada = document.getElementById("txtIdEstacion").value;
+	destino = document.getElementById("txtIdDestino").value;
 
 	//3 se evalua con switch
 	switch (estacionIngresada) {

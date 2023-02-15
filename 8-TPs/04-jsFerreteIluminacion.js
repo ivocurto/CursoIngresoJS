@@ -320,3 +320,4 @@ function CalcularPrecio ()
     //7 Muestra el precioFinal en la caja de texto
     document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal.toFixed(2);
 }
+
