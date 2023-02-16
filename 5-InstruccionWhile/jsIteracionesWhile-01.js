@@ -1,18 +1,67 @@
 /* al presionar el botón mostrar 10 repeticiones 
 con números DESCENDENTES, desde el 10 al 1. */
-function mostrar() {
+//function mostrar() {
 	//1 declaración de variables
 	let i;
 
 	//2 asignación de valores a las variables
-	i = 0;
+/* 	i = 0;
 
 	//3 verificación con while
 	while (i < 10) {
 		i = i + 1;
 		alert(i);
+	} */
+//}//FIN DE LA FUNCIÓN
+
+////////////////////////////1 bis/////////////////////
+//While 1 bis- edad y nombre , informar el nombre de la persona mas vieja y la mas joven
+
+//declaración de variables
+function mostrar() {
+	let edad;
+	let nombre;
+	let mayorNombre;
+	let menorNombre;
+	let banderaDelPrimero;
+	let mayorEdad;
+	let menorEdad;
+	let mensaje;
+
+	banderaDelPrimero = true;
+	respuesta = "si";
+
+	while (respuesta == "si") {
+		nombre = prompt("Ingresa un nombre");
+		while(!isNaN(nombre)) {
+			nombre = prompt("Error. Ingrese un nombre válido.");
+		}
+		edad = parseInt(prompt("Ingresa la edad de esa persona"));
+
+		while(isNaN(edad) || edad < 0 || edad > 125) {
+			edad = parseInt(prompt("Error. Ingrese una edad válida."));
+		}
+		if (banderaDelPrimero == true) {
+			mayorEdad = edad;
+			menorEdad = edad;
+			mayorNombre = nombre;
+			menorNombre = nombre;
+			banderaDelPrimero = false;
+		} else if (edad > mayorEdad) {
+			mayorEdad = edad;
+			mayorNombre = nombre;
+		} else if (edad < menorEdad) {
+			menorEdad = edad;
+			menorNombre = nombre;
+		}
+		respuesta = prompt("Desea seguir ingresando datos? si/no");
 	}
-}//FIN DE LA FUNCIÓN
+
+	mensaje = "La persona de mayor edad es " + mayorNombre + " y tiene " + mayorEdad + " años.\nLa persona de menor edad es " + menorNombre + " y tiene " + menorEdad + " años."
+	alert(mensaje);
+}
+
+//////////////explicacion orne///////
 
 /* al presionar el botón mostrar 100 repeticiones 
 con números ASCENDENTE, desde el 1 al 100.
