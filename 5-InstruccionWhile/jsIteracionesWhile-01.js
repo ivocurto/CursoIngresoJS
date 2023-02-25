@@ -2,7 +2,7 @@
 con números DESCENDENTES, desde el 10 al 1. */
 //function mostrar() {
 	//1 declaración de variables
-	let i;
+	//let i;
 
 	//2 asignación de valores a las variables
 /* 	i = 0;

@@ -68,7 +68,7 @@ function ComenzarIngreso ()
 
 	//E.	Número de legajo, numérico de 4 cifras, sin ceros a la izquierda.
 	numeroLegajo = parseInt(prompt("Ingrese su número de legajo (4 cifras, sin ceros a la izquierda)"));
-	while (isNaN(numeroLegajo) || numeroLegajo.toString().length != 4) {
+	while (isNaN(numeroLegajo) || numeroLegajo.toString().length != 4 || numeroLegajo < 1000) {
 		numeroLegajo = parseInt(prompt("Error. Ingrese su número de legajo (4 cifras, sin ceros a la izquierda"));
 		}
 
@@ -92,7 +92,6 @@ function ComenzarIngreso ()
 			nacionalidadIngresada = "Nacionalizado";
 			break;
 	}
-
 
 	document.getElementById("txtIdEdad").value = edadIngresada;
 	document.getElementById("txtIdSexo").value = sexoIngresado;
