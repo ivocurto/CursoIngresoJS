@@ -89,7 +89,7 @@ function mostrar()
 
 	promedio = acumuladorNotas / cantidadAlumnos;
 
-	console.log("El promedio total de las notas es " + promedio);
+	console.log("El promedio total de las notas es " + promedio.toFixed(2));
 	console.log("La nota mas baja es " + notaMasBaja);
 	console.log("El sexo de la persona con la nota mas baja es " + sexoNotaMasBaja);
 	console.log("La cantidad de varones con nota mayor o igual a 6 es de " + contadorVAprobados);
