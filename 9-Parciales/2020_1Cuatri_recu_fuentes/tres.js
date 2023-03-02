@@ -108,3 +108,113 @@ e) El promedio de edad entre las mujeres casadas. */
 	document.write("El promedio de edad entre las mujeres casadas es de " + promedioEdadMujeresCasadas + " años<br>");
 } */
 
+//////////////Recu Parcial 2020 3 bis
+//Alumno: Ivo Curto Eivers
+
+/* Recu 2020 3 bis: Vacaciones en Familia" 
+Nos ingresan una cantidad indeterminada de estadías de vacaciones, 
+validando los datos ingresados:
+nombre del pasajero titular, 
+destino( “Brasil”, “Caribe” o “Europa”), 
+temporada(“alta”,”baja”,“media”),
+cantidad de pasajeros que viajan.
+Informar:
+a)El destino más elegido.
+b)El nombre del pasajero titular que lleva menos pasajeros.
+c)El promedio de personas, que viajan en temporada alta.
+d)El total de personas que viajaron a Europa.
+ */
+
+function mostrar() 
+{
+	let respuesta = 'si';
+	let nombreIngresado;
+	let destinoIngresado;
+	let temporadaIngresada;
+	let pasajerosIngresados;
+	let contadorBrasil = 0;
+	let contadorCaribe = 0;
+	let contadorEuropa = 0;
+	let destinoMasElegido;
+	let menorCantidadDePasajeros;
+	let banderaMenorCantidadDePasajeros = true;
+	let nombreMenorCantidadDePasajeros;
+	let acumuladorPasajerosTempAlta = 0;
+	let acumuladorPasajerosTotal = 0
+	let promedioPasajerosTempAlta;
+
+	while (respuesta == 'si') {
+		nombreIngresado = prompt('Ingresar nombre');
+		while (!isNaN(nombreIngresado)) {
+			nombreIngresado = prompt('Error. Ingresar nombre válido');
+		}
+
+		destinoIngresado = prompt('Ingresar opciones ("Brasil", "Caribe" o "Europa")');
+		while (destinoIngresado != "Brasil" && destinoIngresado != "Caribe" && destinoIngresado != "Europa") {
+			destinoIngresado = prompt('Error. Ingresar opciones válidas ("Brasil", "Caribe" o "Europa")');
+		}
+
+		temporadaIngresada = prompt('Ingresar opciones ("alta", "baja" o "media")');
+		while (temporadaIngresada != "alta" && temporadaIngresada != "baja" && temporadaIngresada != "media") {
+			temporadaIngresada = prompt('Error. Ingresar opciones válidas ("alta", "baja" o "media")');
+		}
+
+		pasajerosIngresados = parseInt(prompt('Ingresar cantidad de pasajeros que viajan'));
+		while (isNaN(pasajerosIngresados) || pasajerosIngresados < 0 || pasajerosIngresados > 20) {
+			pasajerosIngresados = parseInt(prompt('Ingrese una cantidad válida: (entre 1 y 20)'));
+		}
+
+		switch (destinoIngresado) {
+			case "Brasil":
+				contadorBrasil = contadorBrasil + 1;
+				break;
+			case "Caribe":
+				contadorCaribe = contadorCaribe + 1;
+				break;
+			case "Europa":
+				contadorEuropa = contadorEuropa + 1;
+				break;
+		}
+
+		if (banderaMenorCantidadDePasajeros == true || menorCantidadDePasajeros > pasajerosIngresados) {
+			menorCantidadDePasajeros = pasajerosIngresados;
+			nombreMenorCantidadDePasajeros = nombreIngresado;
+			banderaMenorCantidadDePasajeros = false;
+		}
+
+		
+		if (temporadaIngresada == "alta") {
+			acumuladorPasajerosTempAlta = acumuladorPasajerosTempAlta + pasajerosIngresados;
+		}
+
+		acumuladorPasajerosTotal = acumuladorPasajerosTotal + pasajerosIngresados;
+		
+
+
+		respuesta = prompt('¿Desea seguir ingresando datos? si/no');
+	}//fin del ciclo while
+
+	if (contadorBrasil > contadorCaribe && contadorBrasil > contadorEuropa) {
+		destinoMasElegido = "Brasil";
+	} else if (contadorCaribe > contadorEuropa) {
+		destinoMasElegido = "Caribe";
+	} else {
+		destinoMasElegido = "Europa";
+	}
+
+// c)El promedio de personas, que viajan en temporada alta.
+	if (acumuladorPasajerosTempAlta != 0) {
+		promedioPasajerosTempAlta = acumuladorPasajerosTotal / acumuladorPasajerosTempAlta;
+		console.log('El promedio de personas que viajan en temporada alta es ' + promedioPasajerosTempAlta);
+	} else {
+		console.log('Ningún pasajero viaja en temporada alta');
+	}
+
+// a)El destino más elegido.
+	console.log('El destino más elegido es ' + destinoMasElegido);
+// b)El nombre del pasajero titular que lleva menos pasajeros.
+	console.log('El nombre del pasajero titular que lleva menos pasajeros es ' + nombreMenorCantidadDePasajeros);
+// d)El total de personas que viajaron a Europa.
+	console.log('El total de personas que viajaron a Europa es ' + contadorEuropa);
+
+}//fin de la funcion

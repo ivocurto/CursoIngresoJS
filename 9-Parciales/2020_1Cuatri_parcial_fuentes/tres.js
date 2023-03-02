@@ -147,7 +147,7 @@ function mostrar()
 	let continenteConMasHabitantes;
 
 
-	for (i = 0; i < 2; i++) {
+	for (i = 0; i < 5; i++) {
 		continenteIngresado = prompt('Ingresar continente ("America", "Asia", "Europa", "Africa" o "Oceania")');
 		while (continenteIngresado != "America" && continenteIngresado != "Asia" && continenteIngresado != "Europa" && continenteIngresado != "Africa" && continenteIngresado != "Oceania") {
 			continenteIngresado = prompt('Error. Ingresar continente válidas ("America", "Asia", "Europa", "Africa" o "Oceania")');

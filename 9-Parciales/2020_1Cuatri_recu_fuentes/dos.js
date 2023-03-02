@@ -147,7 +147,7 @@ function mostrar()
         nombreIngresado = prompt('Ingresar nombre de la película');
 
         precioIngresado = parseFloat(prompt('Ingresar precio'));
-        while (isNaN(precioIngresado) || precioIngresado < 1) {
+        while (isNaN(precioIngresado) || precioIngresado < 1 || precioIngresado > 3000) {
             precioIngresado = parseFloat(prompt('Ingrese una precio válido'));
         }
 
