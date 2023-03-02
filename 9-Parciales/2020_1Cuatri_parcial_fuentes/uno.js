@@ -188,7 +188,7 @@ function mostrar()
 		}
 
 		pesoIngresado = parseFloat(prompt('Ingrese el peso del producto en kilogramos. Peso máximo de 30kg.'));
-		while (isNaN(pesoIngresado) || precioIngresado < 0 || precioIngresado > 30) {
+		while (isNaN(pesoIngresado) || pesoIngresado < 0 || pesoIngresado > 30) {
 			pesoIngresado = parseFloat(prompt('Error. Ingrese un peso válido en kilogramos. Peso máximo de 30kg.'));
 		}
 
