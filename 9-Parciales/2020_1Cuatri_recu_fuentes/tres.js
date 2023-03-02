@@ -7,7 +7,7 @@ c) La cantidad de Mujeres que hay solteras o viudas.
 d) cuantas personas de la tercera edad( mas de 60 años) , tienen mas de 38 de temperatura
 e) El promedio de edad entre las mujeres casadas. */
 
-function mostrar()
+/* function mostrar()
 {
 	let nombreIngresado;
 	let nacionalidadIngresada;
@@ -106,5 +106,5 @@ function mostrar()
 	document.write("Hay " + contadorDeMujeresSolterasOViudas + " mujeres que estan solteras o viudas<br>");
 	document.write("Hay " + contadorTerceraEdadConTempAlta + " personas de tercera edad con una temperatura corporal mayor a 38°C<br>");
 	document.write("El promedio de edad entre las mujeres casadas es de " + promedioEdadMujeresCasadas + " años<br>");
-}
+} */
 
